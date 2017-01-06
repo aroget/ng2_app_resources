@@ -1,0 +1,32 @@
+<qa-knowledgebase-sub-nav></qa-knowledgebase-sub-nav>
+<!--<qa-knowledgebase-edit></qa-knowledgebase-edit>-->
+
+<div class="col-xs-12 col-sm-6 col-sm-offset-3 card" *ngIf="isReady">
+  <div class="card__item">
+    <div class="row">
+      <a [routerLink]="['edit']" class="pull-right">Edit</a>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Question</label>
+        <p>{{ data.question }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <label>Role</label>
+        {{ roleName }}
+      </div>
+      <div class="col-xs-6">
+        <label>Tags</label>
+        {{ data.tags.join(', ') }}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label>Description</label>
+        <p [innerHTML]="data.description"></p>
+      </div>
+    </div>
+  </div>
+</div>

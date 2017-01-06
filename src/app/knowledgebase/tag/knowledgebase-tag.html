@@ -1,0 +1,21 @@
+<div [ngSwitch]="isReady">
+  <qa-knowledgebase-sub-nav></qa-knowledgebase-sub-nav>
+
+  <div *ngSwitchCase="true">
+    <div class="row">
+      <qa-knowledgebase-item
+        class="col-xs-12"
+        [knowledgebase]="question"
+        class="col-xs-12 col-sm-6"
+        *ngFor="let question of knowledgebase.results">
+      </qa-knowledgebase-item>
+    </div>
+
+    <div class="row">
+      <qa-pagination
+      (navigate)="onNavigate($event)"
+      [data]="knowledgebase">
+      </qa-pagination>
+    </div>
+  </div>
+</div>

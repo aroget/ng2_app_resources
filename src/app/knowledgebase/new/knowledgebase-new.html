@@ -1,0 +1,36 @@
+<qa-knowledgebase-sub-nav></qa-knowledgebase-sub-nav>
+
+<div class="col-xs-12 col-sm-6 col-sm-offset-3">
+  <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)">
+    <div class="form-group">
+      <label for="question">Question</label>
+      <input class="form-control" type="text" name="question" formControlName="question">
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <label for="description">Answer</label>
+        <qa-ckeditor-input (inputChanged)="onInputChanged($event)"></qa-ckeditor-input>
+        <br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="tags">Tags</label>
+          <input class="form-control" type="text" name="tags" formControlName="tags">
+        </div>
+      </div>
+      <div class="col-xs-6">
+        <div class="form-group">
+          <label for="role">Role</label>
+          <qa-role-select (roleSelected)="onRoleSelected($event)"></qa-role-select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary pull-right">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

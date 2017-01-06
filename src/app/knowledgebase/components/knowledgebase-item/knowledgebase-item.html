@@ -1,0 +1,30 @@
+<div class="knowledgebase card">
+  <div class="card__item">
+    <div class="knowledgebase__details">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <h4>{{ knowledgebase.question }}</h4>
+        </div>
+        <div class="col-xs-12 col-sm-4 text-right">
+          <a [routerLink]="['/knowledgebase/' + knowledgebase.id]">Details</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <p>{{ knowledgebase.description | qaSanitizePipe | qaTruncate:120 }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="knowledgebase__meta">
+      <span
+        aria-hidden="true"
+        *ngIf="knowledgebase.tags.length > 0"
+        class="glyphicon glyphicon glyphicon-tags">
+      </span>
+      <div *ngFor="let tag of knowledgebase.tags">
+        <a [routerLink]="['/knowledgebase/tag/' + tag | qaSlugify]">{{ tag }}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="media">
+  <img [src]="media.file" class="img-responsive">
+  <span
+    (click)="copyUrl(media.file)"
+    class="glyphicon glyphicon-duplicate">
+  </span>
+  <input #source type="text" [value]="media.file" readonly>
+</div>

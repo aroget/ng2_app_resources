@@ -1,0 +1,11 @@
+.knowledgebase {
+  &__meta {
+    a {
+      margin-right: 4px;
+      text-transform: capitalize;
+    }
+    > div {
+      display: inline-block;
+    }
+  }
+}

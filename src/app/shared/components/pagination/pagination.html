@@ -1,0 +1,6 @@
+<div *ngIf="data.previous || data.next">
+  <ul class="pagination">
+    <li><a href="#" (click)="onNavigate($event, data.previous)">Previous</a></li>
+    <li><a href="#" (click)="onNavigate($event, data.next)">Next</a></li>
+  </ul>
+</div>

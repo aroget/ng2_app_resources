@@ -1,0 +1,24 @@
+body {
+  font-size: 140%;
+  font-weight: 400;
+  line-height: 1.4;
+  color: $color-medium;
+  letter-spacing: .4px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+strong {
+  font-weight: 600;
+  color: $color-dark;
+}
+
+a {
+  color: $color-accent;
+}

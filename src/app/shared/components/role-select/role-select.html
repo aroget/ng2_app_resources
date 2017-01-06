@@ -1,0 +1,10 @@
+<select class="form-control" (change)="onChange($event)">
+  <option
+    *ngFor="let role of roles"
+    [selected]="role.id === selected"
+    [attr.data-id]="role.id"
+    [value]="role.id"
+    [attr.data-uuid]="role.uuid">
+    {{ role.name }}
+  </option>
+</select>
