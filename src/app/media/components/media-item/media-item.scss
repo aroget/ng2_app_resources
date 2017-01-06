@@ -8,10 +8,6 @@ input {
   &:hover,
   &:focus,
   &:active {
-    border: none;
     outline: none;
-    box-shadow: none;
-    color: transparent;
-    background: transparent;
   }
 }
