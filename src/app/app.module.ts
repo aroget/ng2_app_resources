@@ -12,7 +12,7 @@ import { KnowledgeBaseRoutesModule } from './knowledgebase/knowledgebase.routing
 import { MediaModule } from './media/media.module';
 import { MediaRoutesModule } from './media/media.routing';
 
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 import { SharedModule } from './shared/shared.module';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
@@ -27,7 +27,7 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     KnowledgeBaseRoutesModule,
     HttpModule,
     FormsModule,
-    routing
+    AppRoutingModule
   ],
   declarations: [
     AppComponent,

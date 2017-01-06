@@ -10,7 +10,7 @@ import {
   OnDestroy
 } from '@angular/core';
 
-import './ckeditor.loader';
+// import './ckeditor.loader';
 declare var CKEDITOR: any;
 
 @Component({
